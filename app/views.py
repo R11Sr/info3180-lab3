@@ -41,7 +41,7 @@ def contact():
         msg.body = f"{request.form['message']}"
         mail.send(msg)
         flash("Message Sent!")
-        redirect(url_for('home'))
+        return redirect(url_for('home'))
 
     return render_template('contact.html',form = form)
 
